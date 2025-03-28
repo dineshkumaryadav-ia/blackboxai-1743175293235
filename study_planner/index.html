@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Study Planner Pro</title>
+  <meta name="description" content="A comprehensive study planning application">
+  
+  <!-- Fonts & Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/themes.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+  
+  <!-- PWA -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#6366f1">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Header Section -->
+    <header class="app-header">
+      <div class="header-content">
+        <h1 class="app-title">
+          <i class="fas fa-graduation-cap"></i>
+          Study Planner Pro
+        </h1>
+        <div class="header-actions">
+          <button id="theme-toggle" class="icon-button" aria-label="Toggle theme">
+            <i class="fas fa-moon"></i>
+          </button>
+          <button id="user-menu" class="icon-button" aria-label="User menu">
+            <i class="fas fa-user-circle"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Dashboard -->
+    <main class="dashboard">
+      <!-- Task Manager Panel -->
+      <section class="panel task-manager">
+        <div class="panel-header">
+          <h2><i class="fas fa-tasks"></i> Task Manager</h2>
+          <button id="add-task-btn" class="primary-btn">
+            <i class="fas fa-plus"></i> Add Task
+          </button>
+        </div>
+        <div class="panel-content">
+          <!-- Task form will be inserted here by JS -->
+          <div id="task-list-container"></div>
+        </div>
+      </section>
+
+      <!-- Schedule View -->
+      <section class="panel schedule-view">
+        <div class="panel-header">
+          <h2><i class="fas fa-calendar-alt"></i> Weekly Schedule</h2>
+          <div class="view-options">
+            <button class="view-option active">Week</button>
+            <button class="view-option">Day</button>
+          </div>
+        </div>
+        <div class="panel-content">
+          <div id="calendar-container"></div>
+        </div>
+      </section>
+
+      <!-- Focus Tools -->
+      <section class="panel focus-tools">
+        <div class="panel-header">
+          <h2><i class="fas fa-clock"></i> Focus Tools</h2>
+        </div>
+        <div class="panel-content">
+          <div id="pomodoro-container"></div>
+          <div class="focus-stats">
+            <div class="stat-card">
+              <i class="fas fa-fire"></i>
+              <span>5 day streak</span>
+            </div>
+            <div class="stat-card">
+              <i class="fas fa-check-circle"></i>
+              <span>12 tasks completed</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="app-footer">
+      <p>© 2023 Study Planner Pro</p>
+      <div class="footer-links">
+        <a href="#"><i class="fas fa-question-circle"></i> Help</a>
+        <a href="#"><i class="fas fa-cog"></i> Settings</a>
+      </div>
+    </footer>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="assets/js/utils/storage.js"></script>
+  <script src="assets/js/modules/tasks.js"></script>
+  <script src="assets/js/modules/timer.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
